@@ -28,9 +28,9 @@ export default function UpperBox({ selected }: UpperBoxProps) {
             .catch((err: string) => {
               toast.error(`Deprem konumu panoya kopyalanamadı. (${err})`);
             });
-          toast.success(
-            `Deprem konumu panoya kopyalandı. (${selected.location_properties.epiCenter.name})`
-          );
+          toast.success('Deprem konumu panoya kopyalandı.', {
+            description: `${selected.title}`,
+          });
         }
       }}
       title={`${!selected ? 'Deprem seçin' : 'Deprem konumu panoya kopyala.'}`}
