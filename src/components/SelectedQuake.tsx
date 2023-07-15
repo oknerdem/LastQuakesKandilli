@@ -17,12 +17,9 @@ export default function SelectedQuake({
 }: SelectedQuakeProps) {
   return (
     <div className="flex flex-col items-center justify-center text-center gap-2">
-      <h3 className="font-semibold">{selected.title}</h3>
+      <h3>{selected.title}</h3>
       <p>{betterDate}</p>
-      {/* <p className="font-semibold">
-        {selected.location_properties.epiCenter.name}
-      </p> */}
-      <h4 className="font-semibold">{selected.mag}</h4>
+      <h4>{selected.mag}</h4>
     </div>
   );
 }

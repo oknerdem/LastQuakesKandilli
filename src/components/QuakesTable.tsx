@@ -17,7 +17,7 @@ function QuakesTable({ setSelected, item }: QuakesTableProps) {
           ? item.location_properties.epiCenter.name
           : item.title}
       </span>
-      <span className={`font-medium ${item.mag > 4.0 ? 'text-rose-500' : ''}`}>
+      <span className={`${item.mag > 4.0 ? 'text-rose-500' : ''}`}>
         {item.mag}
       </span>
     </div>
