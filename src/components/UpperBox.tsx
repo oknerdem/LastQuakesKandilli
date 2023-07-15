@@ -23,10 +23,11 @@ export default function UpperBox({ selected }: UpperBoxProps) {
       onClick={() => {
         if (!selected) return;
         else {
-          navigator.clipboard.writeText(`${selected.title}`).catch(err => {
-            console.log('err', err);
-            toast.error('Deprem konumu panoya kopyalanamadı.');
-          });
+          navigator.clipboard
+            .writeText(`${selected.title}`)
+            .catch((err: string) => {
+              toast.error(`Deprem konumu panoya kopyalanamadı. (${err})`);
+            });
           toast.success(
             `Deprem konumu panoya kopyalandı. (${selected.location_properties.epiCenter.name})`
           );

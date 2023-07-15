@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Toaster } from 'sonner';
+import { Toaster, toast } from 'sonner';
 import { Props } from './types/types';
 import Main from './components/Main';
 import Box from './components/Box';
@@ -18,8 +18,8 @@ function App() {
         setData(data.result);
         setLoading(false);
       })
-      .catch(err => {
-        console.log('err', err);
+      .catch((err: string) => {
+        toast.error(`Bir sorun oluştu. (${err})`);
         setLoading(false);
       });
   }, []);
