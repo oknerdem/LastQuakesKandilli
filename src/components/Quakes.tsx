@@ -35,7 +35,7 @@ export default function Quakes({
   selectedFilter,
 }: QuakesProps) {
   return (
-    <section className="overflow-auto m-auto w-full h-full flex flex-col gap-2 px-4 pb-2">
+    <section className="overflow-auto m-auto w-full h-full flex flex-col gap-2 px-4 pb-2 overflow-y-scroll">
       {filteredData?.map(item => (
         <QuakesTable key={item._id} setSelected={setSelected} item={item} />
       ))}

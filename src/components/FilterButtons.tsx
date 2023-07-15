@@ -1,3 +1,5 @@
+import { TbMathEqualGreater } from 'react-icons/tb';
+
 type FilterButtonsProps = {
   filter: {
     name: string;
@@ -28,6 +30,7 @@ export default function FilterButtons({
             key={filter.value}
             title={filter.name}
           >
+            <TbMathEqualGreater />
             {filter.name}
           </button>
         );

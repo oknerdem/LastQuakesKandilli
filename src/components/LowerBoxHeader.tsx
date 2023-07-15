@@ -15,7 +15,7 @@ export default function LowerBoxHeader({
   setSelectedFilter,
 }: LowerBoxHeaderProps) {
   return (
-    <section className="px-4 pt-2 w-full flex items-center justify-between">
+    <section className="px-4 pr-6 pt-2 w-full flex items-center justify-between">
       <div className="font-semibold text-base">Son depremler</div>
       <FilterButtons
         filter={filter}
