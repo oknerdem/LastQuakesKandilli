@@ -17,10 +17,10 @@ export default function FilterButtons({
       {filter.map(filter => {
         return (
           <button
-            className={`flex items-center gap-1 bg-neutral-200 dark:bg-neutral-700 px-1.5 py-1 rounded-md hover:bg-neutral-300 dark:hover:bg-neutral-600 active:bg-neutral-300/70 dark:active:bg-neutral-600/60 duration-200 text-xs ${
+            className={`flex items-center gap-1 px-1.5 py-1 rounded-md hover:bg-neutral-300 dark:hover:bg-neutral-600 active:bg-neutral-300/70 dark:active:bg-neutral-600/60 duration-200 text-xs ${
               selectedFilter === filter.value
-                ? 'bg-neutral-300 dark:bg-neutral-600'
-                : ''
+                ? 'bg-neutral-300 dark:bg-neutral-600/90'
+                : 'bg-neutral-200 dark:bg-neutral-700/70'
             }`}
             onClick={() => {
               setSelectedFilter(filter.value);
