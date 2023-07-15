@@ -13,10 +13,10 @@ export default function LowerBox({
   const [selectedFilter, setSelectedFilter] = useState<string | null>('all');
 
   const filteredData = data?.filter(item =>
-    selectedFilter === '4'
-      ? item.mag >= 4
-      : selectedFilter === '6'
-      ? item.mag >= 6
+    selectedFilter === '3'
+      ? item.mag >= 3
+      : selectedFilter === '5'
+      ? item.mag >= 5
       : item
   );
 

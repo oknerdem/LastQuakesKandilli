@@ -6,13 +6,13 @@ const filter = [
   },
   {
     id: 3,
-    name: '> 4',
-    value: '4',
+    name: '> 3',
+    value: '3',
   },
   {
     id: 4,
-    name: '> 6',
-    value: '6',
+    name: '> 5',
+    value: '5',
   },
 ];
 
