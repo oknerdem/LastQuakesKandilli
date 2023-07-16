@@ -1,28 +1,29 @@
 import { useEffect, useState } from 'react';
 import { Toaster, toast } from 'sonner';
 import { Props } from './types/types';
+import { useStore } from './context/store';
 import Main from './components/Main';
 import Box from './components/Box';
 import UpperBox from './components/UpperBox';
 import LowerBox from './components/LowerBox';
+import getQuakes from './lib/quakes';
 
 function App() {
-  const [data, setData] = useState<Props[]>([]);
+  const { data, setData } = useStore();
   const [selected, setSelected] = useState<Props | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
-    fetch('https://api.orhanaydogdu.com.tr/deprem/kandilli/live')
-      .then(response => response.json())
-      .then((data: { result: Props[] }) => {
-        setData(data.result);
+    getQuakes()
+      .then((res: Props[]) => {
+        setData(res);
         setLoading(false);
       })
       .catch((err: string) => {
         toast.error(`Bir sorun oluştu. (${err})`);
         setLoading(false);
       });
-  }, []);
+  }, [setData]);
 
   return (
     <Main>

@@ -1,4 +1,5 @@
 import { TbMathEqualGreater } from 'react-icons/tb';
+import RefreshButton from './RefreshButton';
 
 type FilterButtonsProps = {
   filter: {
@@ -16,6 +17,7 @@ export default function FilterButtons({
 }: FilterButtonsProps) {
   return (
     <div className="flex gap-2">
+      <RefreshButton />
       {filter.map(filter => {
         return (
           <button
