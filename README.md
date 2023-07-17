@@ -1,1 +1,3 @@
-_ComingSoon_
+## Bilinen hatalar:
+
+- Yenile iconu terse dönüyor. 🥲
