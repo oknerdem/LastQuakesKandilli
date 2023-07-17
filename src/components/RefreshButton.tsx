@@ -30,7 +30,7 @@ export default function RefreshButton() {
       className="flex items-center gap-1 px-3 py-1 rounded-md hover:bg-neutral-300 dark:hover:bg-neutral-600 active:bg-neutral-300/70 dark:active:bg-neutral-600/60 duration-200 text-xs bg-neutral-200 dark:bg-neutral-700/70"
       onClick={animate ? undefined : refreshHandler}
     >
-      <span className={`${animate ? 'animate-spin' : ''}`}>
+      <span className={`${animate ? 'animate-reverse-spin' : ''}`}>
         <TbRefresh />
       </span>
     </button>
