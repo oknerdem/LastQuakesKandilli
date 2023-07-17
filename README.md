@@ -1,3 +1,3 @@
 ### Bilinen hatalar:
 
-- Yenile iconu terse dönüyor. 🥲
+- Yenile iconu artık terse dönmüyor. 🥲
