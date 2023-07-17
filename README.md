@@ -1,3 +1,3 @@
-## Bilinen hatalar:
+### Bilinen hatalar:
 
 - Yenile iconu terse dönüyor. 🥲
