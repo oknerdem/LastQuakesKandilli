@@ -12,17 +12,16 @@ export default function RefreshButton() {
     setAnimate(true);
     getQuakes()
       .then(res => {
-        setData([]);
-        setData(res);
+        setTimeout(() => {
+          setData([]);
+          setData(res);
+          setAnimate(false);
+          toast.success('Depremler başarıyla güncellendi.');
+        }, 1400);
       })
       .catch((err: string) => {
         toast.error(`Bir sorun oluştu. (${err})`);
       });
-
-    setTimeout(() => {
-      setAnimate(false);
-      toast.success('Depremler başarıyla güncellendi.');
-    }, 1500);
   };
 
   return (
