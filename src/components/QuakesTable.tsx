@@ -33,10 +33,7 @@ function QuakesTable({ setSelected, item }: QuakesTableProps) {
         {item.location_properties.epiCenter.name
           ? item.location_properties.epiCenter.name
           : item.title}{' '}
-        ·
-        <span className="font-normal ml-1 dark:text-neutral-400 text-neutral-600">
-          {pastTime}
-        </span>
+        ·<span className="font-normal ml-1 opacity-60">{pastTime}</span>
       </span>
 
       <span className={`${item.mag > 4.0 ? 'text-rose-500' : ''}`}>
