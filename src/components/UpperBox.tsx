@@ -1,4 +1,3 @@
-import { toast } from 'sonner';
 import { Props } from '../types/types';
 import SelectedQuake from './SelectedQuake';
 import NoSelectedQuake from './NoSelectedQuake';
@@ -24,17 +23,19 @@ export default function UpperBox({ selected }: UpperBoxProps) {
       onClick={() => {
         if (!selected) return;
         else {
-          navigator.clipboard
-            .writeText(`${selected.title}`)
-            .catch((err: string) => {
-              toast.error(`Deprem konumu panoya kopyalanamadı. (${err})`);
-            });
-          toast.success('Deprem konumu panoya kopyalandı.', {
-            description: `${selected.title}`,
+          navigator.clipboard.writeText(`${selected.title}`).catch(() => {
+            return;
           });
+          window.open(
+            `https://www.google.com/maps/search/?api=1&query=${selected.title}`,
+            '_blank',
+            'noopener noreferrer'
+          );
         }
       }}
-      title={`${!selected ? 'Deprem seçin' : 'Deprem konumu panoya kopyala'}`}
+      title={`${
+        !selected ? 'Deprem seçin' : "Deprem konumunu Google Maps'te aç"
+      }`}
     >
       {selected ? (
         <SelectedQuake betterDate={betterDate} selected={selected} />

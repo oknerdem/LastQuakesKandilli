@@ -25,7 +25,24 @@ export default function SelectedQuake({
       exit={{ opacity: 0 }}
       transition={{ duration: 0.4 }}
     >
-      <h3>{selected.title}</h3>
+      <h3>
+        {selected.title}
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="1.5"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          width="1em"
+          height="1em"
+          className="inline-flex shrink-0 text-xl ml-auto opacity-50 pb-1"
+        >
+          <line x1="7" y1="17" x2="17" y2="7"></line>
+          <polyline points="7 7 17 7 17 17"></polyline>
+        </svg>
+      </h3>
       <p>{betterDate}</p>
       <h4>{selected.mag}</h4>
     </motion.div>
