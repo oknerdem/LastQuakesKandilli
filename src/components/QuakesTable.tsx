@@ -29,11 +29,14 @@ function QuakesTable({ setSelected, item }: QuakesTableProps) {
       onClick={() => setSelected(item)}
       title={item.title}
     >
-      <span className="text-sm font-medium md:max-w-full max-w-[16rem]">
+      <span className="text-sm font-normal md:max-w-full max-w-[16rem]">
         {item.location_properties.epiCenter.name
           ? item.location_properties.epiCenter.name
           : item.title}{' '}
-        ·<span className="font-normal ml-1">{pastTime}</span>
+        ·
+        <span className="font-normal ml-1 dark:text-neutral-400 text-neutral-600">
+          {pastTime}
+        </span>
       </span>
 
       <span className={`${item.mag > 4.0 ? 'text-rose-500' : ''}`}>
