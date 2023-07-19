@@ -30,7 +30,7 @@ export default function FilterButtons({
               setSelectedFilter(filter.value);
             }}
             key={filter.value}
-            title={filter.name}
+            title={`${filter.name} ve üstü`}
           >
             <TbMathEqualGreater />
             {filter.name}
