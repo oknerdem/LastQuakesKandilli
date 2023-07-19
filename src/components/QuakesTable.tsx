@@ -29,7 +29,7 @@ function QuakesTable({ setSelected, item }: QuakesTableProps) {
       onClick={() => setSelected(item)}
       title={item.title}
     >
-      <span className="text-sm font-medium md:max-w-full max-w-[17rem]">
+      <span className="text-sm font-medium md:max-w-full max-w-[16rem]">
         {item.location_properties.epiCenter.name
           ? item.location_properties.epiCenter.name
           : item.title}{' '}
