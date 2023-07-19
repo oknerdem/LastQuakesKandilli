@@ -3,6 +3,7 @@ import { toast } from 'sonner';
 import { TbRefresh } from 'react-icons/tb';
 import { useStore } from '../context/store';
 import getQuakes from '../lib/quakes';
+import styles from '../App.module.css';
 
 export default function RefreshButton() {
   const [animate, setAnimate] = useState(false);
@@ -26,7 +27,7 @@ export default function RefreshButton() {
 
   return (
     <button
-      className="flex items-center gap-1 px-3 py-1 rounded-md hover:bg-neutral-300 dark:hover:bg-neutral-600 active:bg-neutral-300/70 dark:active:bg-neutral-600/60 duration-200 text-xs bg-neutral-200 dark:bg-neutral-700/70"
+      className={styles.refreshButton}
       onClick={animate ? undefined : refreshHandler}
       title="Depremleri güncelle"
     >

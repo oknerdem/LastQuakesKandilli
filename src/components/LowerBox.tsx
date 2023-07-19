@@ -4,6 +4,7 @@ import Quakes from './Quakes';
 import LowerBoxHeader from './LowerBoxHeader';
 import LoadingIcon from './LoadingIcon';
 import filter from '../data/filter';
+import styles from '../App.module.css';
 
 export default function LowerBox({
   loading,
@@ -21,7 +22,7 @@ export default function LowerBox({
   );
 
   return (
-    <section className="flex flex-col gap-2 md:max-w-3xl max-w-lg w-full dark:bg-neutral-800/60 rounded-t-md border-t border-x dark:border-neutral-700/80 h-[70%] bg-neutral-100/60 border-neutral-200/80">
+    <section className={styles.lowerBox}>
       <LowerBoxHeader
         filter={filter}
         selectedFilter={selectedFilter}
