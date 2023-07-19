@@ -33,7 +33,7 @@ export default function UpperBox({ selected }: UpperBoxProps) {
           });
         }
       }}
-      title={`${!selected ? 'Deprem seçin' : 'Deprem konumu panoya kopyala.'}`}
+      title={`${!selected ? 'Deprem seçin' : 'Deprem konumu panoya kopyala'}`}
     >
       {selected ? (
         <SelectedQuake betterDate={betterDate} selected={selected} />
