@@ -4,8 +4,11 @@ Kandilli rasathanesine göre son 24 saat içerisinde Türkiye'de (ve Türk topra
 
 ### Kurulum:
 
-- yarn
-- yarn dev
+```
+~ yarn
+~ yarn dev
+``` 
+
 
 ### Kullanılan teknolojiler:
 
