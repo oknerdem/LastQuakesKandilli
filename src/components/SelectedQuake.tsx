@@ -19,7 +19,7 @@ export default function SelectedQuake({
 }: SelectedQuakeProps) {
   return (
     <motion.div
-      className="flex flex-col items-center justify-center text-center gap-2"
+      className="flex flex-col items-center justify-center text-center md:gap-2 gap-0"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
