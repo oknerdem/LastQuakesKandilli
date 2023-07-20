@@ -15,5 +15,5 @@
 }
 
 .searchOpener {
-  @apply dark:bg-neutral-700/50 px-2 py-2 rounded-full w-2 h-2 text-xs border dark:border-neutral-600/50 dark:hover:bg-neutral-700/100 dark:active:bg-neutral-700/60 cursor-pointer duration-200 bg-neutral-200/50 hover:bg-neutral-200/80 flex items-center justify-center;
+  @apply dark:bg-neutral-700/50 px-3 py-3 rounded-full w-2 h-2 text-xs border dark:border-neutral-600/50 dark:hover:bg-neutral-700/100 dark:active:bg-neutral-700/60 cursor-pointer duration-200 bg-neutral-200/50 hover:bg-neutral-200/80 flex items-center justify-center;
 }
