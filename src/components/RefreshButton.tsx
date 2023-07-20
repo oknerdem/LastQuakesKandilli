@@ -7,10 +7,11 @@ import styles from '../App.module.css';
 
 export default function RefreshButton() {
   const [animate, setAnimate] = useState(false);
-  const { setData } = useStore();
+  const { setData, setIsOpen } = useStore();
 
   const refreshHandler = () => {
     setAnimate(true);
+    setIsOpen(false);
     getQuakes()
       .then(res => {
         setTimeout(() => {

@@ -3,6 +3,7 @@ import { Toaster, toast } from 'sonner';
 import { Props } from './types/types';
 import { useStore } from './context/store';
 import Main from './components/Main';
+import Search from './components/Search';
 import Box from './components/Box';
 import UpperBox from './components/UpperBox';
 import LowerBox from './components/LowerBox';
@@ -28,6 +29,7 @@ function App() {
   return (
     <Main>
       <Toaster position="top-center" />
+      <Search />
       <Box>
         <UpperBox selected={selected} />
         <LowerBox loading={loading} data={data} setSelected={setSelected} />
