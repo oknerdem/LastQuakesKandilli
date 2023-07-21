@@ -43,7 +43,7 @@ export default function SelectedQuake({
           <polyline points="7 7 17 7 17 17"></polyline>
         </svg>
       </h3>
-      <p>{betterDate}</p>
+      <time dateTime={betterDate}>{betterDate}</time>
       <h4>{selected.mag}</h4>
     </motion.div>
   );
