@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { toast } from 'sonner';
-import { TbRefresh } from 'react-icons/tb';
+import { IconRefresh } from '@tabler/icons-react';
 import { useStore } from '../context/store';
 import getQuakes from '../lib/quakes';
 import styles from '../App.module.css';
@@ -13,7 +13,7 @@ export default function RefreshButton() {
     setAnimate(true);
     setIsOpen(false);
     getQuakes()
-      .then(res => {
+      .then((res) => {
         setTimeout(() => {
           setData([]);
           setData(res);
@@ -30,10 +30,9 @@ export default function RefreshButton() {
     <button
       className={styles.refreshButton}
       onClick={animate ? undefined : refreshHandler}
-      title="Depremleri güncelle"
-    >
+      title='Depremleri güncelle'>
       <span className={`${animate ? 'animate-reverse-spin' : ''}`}>
-        <TbRefresh />
+        <IconRefresh size={12} />
       </span>
     </button>
   );
